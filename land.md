@@ -1,5 +1,5 @@
-* Initial Modded
-* Fixed Radio FM
-* Fixed Night Light
-* Include Yuka Kernel
-* Ril fixed
+• Initial Modded
+• Fixed Radio FM
+• Include Yuka Kernel
+• Ril fixed
+• Random Mac Address fixed
