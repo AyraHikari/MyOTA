@@ -1,21 +1,11 @@
-• Initial Modded
-• Fixed Radio FM
-• Ril fixed
-• Random Mac Address fixed
-• Glitch/Flickering issue fixed
-• Upstream Havoc 2.4
-• Fix random hanging
-• April security patches
-• Kernel upstreamed to .138
-• Added Agressive battery settings
-• Added deep sleep info to uptime
-• Added 2 more variants for Cover art filters
-• Added OnePlus Red accent color
-• Added Black Pearl theme color
-• Added Slim recents enter/exit animation
-• Added Statusbar logo customizations
-• Fixed Cover art blur for some music apps
-• Fixed screen unpinning with hw keys
-• Fixed old mobile type icons
-• Removed Browser temporarily
-• Imported translations from Crowdin
+- Lockscreen Clock Styles: Introduce Q style TextClock
+- Settings: Cleanup and fixes
+- Lockscreen Visualizer: Add pulse magic
+- Settings: Lockscreen visualizer cleanup
+- Improvement Russian and Turkish translations
+- Added quick reply for Messaging
+- Incerase ZRAM up to 1GB
+- Added DT2W
+- DT2W enabled as default
+- Added Alessa governors
+- Added fast charging and enabled by default
