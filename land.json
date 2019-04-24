@@ -1,13 +1,13 @@
 {
   "response": [
     {
-      "filename": "Havoc-OS-v2.4-20190410-land-Modified.zip",
+      "filename": "Havoc-OS-v2.4-20190424-land-Modified.zip",
       "version": "v2.4-Mod",
       "romtype": "Modified",
       "size": "572121706",
-      "datetime": 1554864506,
-      "id": "51548bb15e40ad38e7625f7b0f062c48d2b2cf46",
-      "url": "https://master.dl.sourceforge.net/project/havoc-mod/land/Havoc-OS-v2.4-20190410-land-Modified.zip"
+      "datetime": 1556111495,
+      "id": "39279bdfe6657d8dc679c64664b0290e01ef70a6",
+      "url": "https://master.dl.sourceforge.net/project/havoc-mod/land/Havoc-OS-v2.4-20190424-land-Modified.zip"
     }
   ]
 }
