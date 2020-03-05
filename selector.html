@@ -1,0 +1,59 @@
+<style type="text/css">
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+</style>
+
+<!-- Three buttons in a group -->
+<div class="btn-group" id="list">
+  
+</div>
+
+<link rel="stylesheet" href="https://raw.githubusercontent.com/AyraHikari/MyOTA/dns/duDialog.min.css">
+<script src="https://raw.githubusercontent.com/AyraHikari/MyOTA/dns/duDialog.min.js"></script>
+
+<script type="text/javascript">
+let api = 'https://raw.githubusercontent.com/AyraHikari/MyOTA/dns/dns';
+let request = new XMLHttpRequest();
+
+request.open('GET', api)
+request.timeout = 6000;
+request.ontimeout = function () {
+ new duDialog("Error", "Failed to fetch latest source!");
+}
+
+request.onload = function() {
+	let resp = JSON.parse(request.responseText);
+	for (i = 0; i < resp.Recommended.length; i ++) {
+		title = resp.Recommended[i].name;
+		desc = resp.Recommended[i].desc;
+		document.getElementById("list").innerHTML += `<button style="width:100%" onclick="openInfo('${title}', '${desc}');">${title}</button>`
+	}
+}
+request.send();
+
+function openInfo(title, desc) {
+	new duDialog(title, desc, duDialog.OK_CANCEL);
+}
+</script>
