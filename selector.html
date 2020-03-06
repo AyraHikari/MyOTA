@@ -1,4 +1,8 @@
 <style type="text/css">
+h1 {
+  color: white;
+  text-align: center;
+}
 .btn-group button {
   background-color: #4CAF50; /* Green background */
   border: 1px solid green; /* Green border */
@@ -25,13 +29,20 @@
 }
 </style>
 
-<!-- Three buttons in a group -->
-<div class="btn-group" id="list">
-  
+<h1>Recommend</h1>
+<div class="btn-group" id="l1">
 </div>
 
-<link rel="stylesheet" href="https://raw.githubusercontent.com/AyraHikari/MyOTA/dns/duDialog.min.css">
-<script src="https://raw.githubusercontent.com/AyraHikari/MyOTA/dns/duDialog.min.js"></script>
+<h1>Others</h1>
+<div class="btn-group" id="l2">
+</div>
+
+<h1>Experimental</h1>
+<div class="btn-group" id="l3">
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dmuy/duDialog/duDialog.min.css">
+<script src="https://cdn.jsdelivr.net/gh/dmuy/duDialog/duDialog.min.js"></script>
 
 <script type="text/javascript">
 let api = 'https://raw.githubusercontent.com/AyraHikari/MyOTA/dns/dns';
@@ -45,15 +56,40 @@ request.ontimeout = function () {
 
 request.onload = function() {
 	let resp = JSON.parse(request.responseText);
+	// Recommended
 	for (i = 0; i < resp.Recommended.length; i ++) {
 		title = resp.Recommended[i].name;
 		desc = resp.Recommended[i].desc;
-		document.getElementById("list").innerHTML += `<button style="width:100%" onclick="openInfo('${title}', '${desc}');">${title}</button>`
+		value = resp.Recommended[i].value;
+		document.getElementById("l1").innerHTML += `<button style="width:100%" onclick="openInfo('${title}', '${desc}', '${value}');">${title}</button>`
 	}
+	// Others
+	for (i = 0; i < resp.Others.length; i ++) {
+		title = resp.Others[i].name;
+		desc = resp.Others[i].desc;
+		value = resp.Others[i].value;
+		document.getElementById("l2").innerHTML += `<button style="width:100%" onclick="openInfo('${title}', '${desc}', '${value}');">${title}</button>`
+	}
+	// Experimental
+	for (i = 0; i < resp.Experimental.length; i ++) {
+		title = resp.Experimental[i].name;
+		desc = resp.Experimental[i].desc;
+		value = resp.Experimental[i].value;
+		document.getElementById("l3").innerHTML += `<button style="width:100%" onclick="openInfo('${title}', '${desc}', '${value}');">${title}</button>`
+	}
+
 }
 request.send();
 
-function openInfo(title, desc) {
-	new duDialog(title, desc, duDialog.OK_CANCEL);
+function openInfo(title, desc, data) {
+	new duDialog(title, desc, duDialog.OK_CANCEL, {
+  callbacks: {
+    okClick: function(){
+      // do something
+      window.open(data, "_self");
+      this.hide();  // hides the dialog
+    }
+  }
+});
 }
 </script>
