@@ -1,0 +1,15 @@
+{
+    "status": "ok",
+    "count": 2,
+    "categories": [{
+        "category_id": "1",
+        "category_name": "Anime",
+        "category_image": "category/1.jpg",
+        "total_wallpaper": "2"
+    }, {
+        "category_id": "2",
+        "category_name": "Live Stock",
+        "category_image": "category/2.jpg",
+        "total_wallpaper": "0"
+    }]
+}
