@@ -43,7 +43,7 @@ for station in data:
 	r, g, b = rgb_im.getpixel((1, 1))
 	replace_color = (r, g, b, 255)
 
-	e = resize(image, 171, 270, replace_color)
+	e = resize(image, 270, 171, replace_color)
 	e.save("logo/{}.jpg".format(station["id"]))
 
 	genStation = station
