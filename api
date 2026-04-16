@@ -1,1 +1,5 @@
-139.162.47.135:7878
+{
+  "totolink,x6000r": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/x6000r.png",
+  "tenda,tx2pro": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/tx2pro.png",
+  "tenda,rx2pro": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/rx2pro.png"
+}
