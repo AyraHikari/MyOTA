@@ -1,4 +1,5 @@
 {
+  "openwrt,generic": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/generic.png",
   "totolink,x6000r": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/x6000r.png",
   "tenda,tx2pro": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/tx2pro.png",
   "tenda,rx2pro": "https://raw.githubusercontent.com/AyraHikari/MyOTA/refs/heads/router/devices/rx2pro.png"
